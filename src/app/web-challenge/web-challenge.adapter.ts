@@ -20,7 +20,7 @@ export class WebChallengeAdapter implements FileAdapterInterface<Observable<Arra
               points.push({
                 lng: p[0],
                 lat: p[1],
-                x: p[2] / 36000,
+                x: p[2],
                 y: p[3]
               });
             });
