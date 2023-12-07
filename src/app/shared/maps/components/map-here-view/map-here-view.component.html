@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-12">
+    <app-form-select [list]="(model.data() | async) ?? []" (id)="change($event)"></app-form-select>
+
+  </div>
+</div>
+<div *ngIf="((model.chartOptions() | async) ?? chartOptions).show"
+     [ngStyle]="{width: '100%', height:'300px', 'max-width': '400px', 'max-height': '300px'}">
+  <app-chart-dynamic [chartOptions]="(model.chartOptions() | async) ?? chartOptions"></app-chart-dynamic>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <app-map-here [points]="(model.points() | async) ?? []"></app-map-here>
+  </div>
+</div>
+
